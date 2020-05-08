@@ -4,6 +4,6 @@ Contains all the models made during the PClub Model Zoo summer project (and also
 
 List of models added -
 
-- Resnet [/resnet/] [(paper)](https://arxiv.org/pdf/1512.03385.pdf)
+- [Resnet](./resnet) [(paper)](https://arxiv.org/pdf/1512.03385.pdf)
   
   More models to be added soon :smiley: ! 
