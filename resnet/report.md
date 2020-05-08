@@ -11,9 +11,11 @@ Ideally the maximum case accuracy which can be obtained (in a network) by optimi
 
 To tackle this problem, the authors introduced a new residual block architecture.
 
-
-$$\hat{\bold{y}}=F(\bold{w,b | X}) + \bold{X}$$
-where, $$\hat{y}= network\space output\newline F=the\space layers\space in \space the\space network,\space with\space trainable\space parameters\space \bold w\space\&\space \bold b\newline \bold X= layer\space input$$
+<p align="center"><img src="https://render.githubusercontent.com/render/math?math=\textbf{\hat{y}}=F(\textbf{w,b|X})%2b\textbf{X}"></p>
+where, 
+<p  align="center"><img  src="https://render.githubusercontent.com/render/math?math=\textbf{\hat{y}}=\network \output"></p>
+<p  align="center"><img  src="https://render.githubusercontent.com/render/math?math=\F=\the \layers \i\n \the \block \with \trainable \parameters \textbf{w} \and \textbf{b}"></p>
+<p  align="center"><img  src="https://render.githubusercontent.com/render/math?math=\textbf{X}=\layer \input"></p>
 
 You can multiply X with a matrix if dimensionality changes.
 
