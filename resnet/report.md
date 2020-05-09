@@ -31,6 +31,8 @@ On my experiments, I tried it with the following architectures-
 Given below are accuracies, the one shown in the above program is two of them.
 |Architecture|Without bottleneck  |With Bottleneck |
 |--|--|--|
-|  Resnet-14| ~81% |not tested yet|
+|Resnet-14| ~81% |not tested yet|
+|Resnet-20|not tested yet|~76%|
 |Resnet-32|~85%|not tested yet|
+
 I did not use data-augmentation.
