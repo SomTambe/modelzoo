@@ -9,9 +9,10 @@ class ModelNet10GAN(Dataset):
     Custom dataset for training a 3D-GAN, without using a variational autoencoder.
     I have not implemented download of dataset. I don't know how to download using python script (too lazy to find out).
     """
-    def __init__(self, dir="./", download=False):
+    def __init__(self,filename, dir="./", download=False):
         """
         Args:
+            filename (string): Filename of dataset, like - "modelnet10.npy.gz"
             dir (string): Path in which you want the dataset 
                 to be saved (keep a minimum space of 9 GBs).
             download (boolean): Set to True if you want to download. 
@@ -21,8 +22,8 @@ class ModelNet10GAN(Dataset):
         self.download=download
         self.transform=transform
         if not _check_exists():
-            raise RuntimeError('modelnet10.npy.gz not present in '+self.dir)
-        with gzip.open(self.dir+'modelnet10.npy.gz','rb') as f:
+            raise RuntimeError(filename,' not present in '+self.dir)
+        with gzip.open(self.dir+,'rb') as f:
             self.arr=np.load(f)
         
 
@@ -30,7 +31,7 @@ class ModelNet10GAN(Dataset):
         return (self.arr.shape[0]-1)
 
     def _check_exists(self):
-        return (os.path.exists(self.dir+"modelnet10.npy.gz"))
+        return (os.path.exists(self.dir+filename))
 
     def __getitem__(self, ind):
         """
